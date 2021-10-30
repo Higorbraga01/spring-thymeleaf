@@ -1,6 +1,7 @@
 package br.com.alura.mvc.mudi.dto;
 
 import br.com.alura.mvc.mudi.model.Pedido;
+import br.com.alura.mvc.mudi.model.StatusPedido;
 
 import javax.validation.constraints.NotBlank;
 
@@ -53,6 +54,7 @@ public class PedidoDTO {
         pedido.setUrlProduto(pedidoDTO.getUrlProduto());
         pedido.setUrlImagem(pedidoDTO.getUrlImagem());
         pedido.setDescricao(pedidoDTO.getDescricao());
+        pedido.setStatusPedido(StatusPedido.AGUARDANDO);
         return pedido;
     }
 }

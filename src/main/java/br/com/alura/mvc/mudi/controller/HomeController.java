@@ -34,7 +34,7 @@ public class HomeController {
 
 	@GetMapping("/{status}")
 	public ModelAndView aguardando(@PathVariable("status") String status) {
-		List<Pedido> pedidos = repository.findAllByStatusPedido(StatusPedido.valueOf(status.toUpperCase(Locale.ROOT)));
+		List<Pedido> pedidos = repository.findAllByStatusPedido(StatusPedido.valueOf(status.toUpperCase()));
 		ModelAndView mv  = new ModelAndView("home");
 		mv.addObject("pedidos", pedidos);
 		mv.addObject("status", status);
